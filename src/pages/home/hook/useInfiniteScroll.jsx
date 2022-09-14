@@ -28,7 +28,11 @@ const useInfiniteScroll = () => {
   useEffect(() => {
     fetch()
   }, [page, fetch])
-
+  useEffect(() => {
+    console.log(page)
+    console.log('loading', loading)
+    console.log('hasMore', hasMore)
+  }, [page, loading, hasMore])
   const callback = ([entries]) => {
     if (entries.isIntersecting && hasMore) {
       setPage(prev => prev + 1)

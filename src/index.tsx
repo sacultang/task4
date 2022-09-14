@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from 'styles/Theme'
 import { IssueProvider } from 'context/GithubContext'
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
   <ThemeProvider theme={theme}>
